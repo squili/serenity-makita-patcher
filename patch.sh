@@ -2,6 +2,10 @@
 
 SOURCE_COMMIT_HASH='81fd4cf3911fdfd59dc76ed791a6e33dac8c775b'
 
+git config --global init.defaultBranch 'main'
+git config --global user.email '74628488+squili@users.noreply.github.com'
+git config --global user.name 'Squili'
+
 if [ -d 'serenity' ]; then
     rm -rf serenity
 fi
