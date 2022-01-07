@@ -30,7 +30,7 @@ for file in ../patches/* ; do
 done
 
 git branch -M main
-git remote add origin https://github.com/squili/serenity-makita.git
+git remote add origin "https://squili:$API_TOKEN@github.com/squili/serenity-makita.git"
 git push origin main -f
 
 cd ..
