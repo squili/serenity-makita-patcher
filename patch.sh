@@ -29,7 +29,8 @@ for file in ../patches/* ; do
   git commit -m "Patch $patch_name"
 done
 
+git branch -M main
 git remote add origin https://github.com/squili/serenity-makita.git
-git push origin master -f
+git push origin main -f
 
 cd ..
