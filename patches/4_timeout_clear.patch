@@ -1,0 +1,20 @@
+diff --git a/src/builder/edit_member.rs b/src/builder/edit_member.rs
+index a9bf22f..faa79aa 100644
+--- a/src/builder/edit_member.rs
++++ b/src/builder/edit_member.rs
+@@ -112,4 +112,15 @@ impl EditMember {
+ 
+         self
+     }
++
++    /// Clears a user's time out
++    ///
++    /// Requires the [Moderate Members] permission.
++    ///
++    /// [Moderate Members]: crate::model::permissions::Permissions::MODERATE_MEMBERS
++    pub fn timeout_clear(&mut self) -> &mut Self {
++        self.0.insert("communication_disabled_until", NULL);
++
++        self
++    }
+ }
