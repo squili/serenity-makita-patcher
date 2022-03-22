@@ -1,8 +1,8 @@
 diff --git a/src/model/timestamp.rs b/src/model/timestamp.rs
-index 2159f46c3..28799e106 100644
+index 2159f46c3..cd4c6df8f 100644
 --- a/src/model/timestamp.rs
 +++ b/src/model/timestamp.rs
-@@ -30,7 +30,7 @@
+@@ -30,11 +30,11 @@
  //! ```
  
  use std::fmt;
@@ -11,6 +11,11 @@ index 2159f46c3..28799e106 100644
  use std::str::FromStr;
  
  #[cfg(not(feature = "time"))]
+-use chrono::{DateTime, TimeZone, Utc};
++use chrono::{DateTime, TimeZone, Utc, Duration};
+ use serde::{Deserialize, Serialize};
+ #[cfg(feature = "time")]
+ use time::format_description::well_known::Rfc3339;
 @@ -260,3 +260,12 @@ impl From<OffsetDateTime> for Timestamp {
          Self(dt)
      }
