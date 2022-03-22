@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-SOURCE_COMMIT_HASH='81fd4cf3911fdfd59dc76ed791a6e33dac8c775b'
+SOURCE_COMMIT_HASH='c2b86265574c5713c774495dc6a926cb01a84dd0'
 
 git config --global init.defaultBranch 'main'
-git config --global user.email '74628488+squili@users.noreply.github.com'
+git config --global user.email 'git@squi.live'
 git config --global user.name 'Squili'
 
 if [ -d 'serenity' ]; then
