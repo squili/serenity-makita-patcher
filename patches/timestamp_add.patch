@@ -1,0 +1,26 @@
+diff --git a/src/model/timestamp.rs b/src/model/timestamp.rs
+index 2159f46c3..28799e106 100644
+--- a/src/model/timestamp.rs
++++ b/src/model/timestamp.rs
+@@ -30,7 +30,7 @@
+ //! ```
+ 
+ use std::fmt;
+-use std::ops::Deref;
++use std::ops::{Add, Deref};
+ use std::str::FromStr;
+ 
+ #[cfg(not(feature = "time"))]
+@@ -260,3 +260,12 @@ impl From<OffsetDateTime> for Timestamp {
+         Self(dt)
+     }
+ }
++
++impl Add<Duration> for Timestamp {
++    type Output = Timestamp;
++
++    fn add(mut self, rhs: Duration) -> Self::Output {
++        self.0 += rhs;
++        self
++    }
++}
