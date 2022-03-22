@@ -25,7 +25,7 @@ index 2159f46c3..cd4c6df8f 100644
 +    type Output = Timestamp;
 +
 +    fn add(mut self, rhs: Duration) -> Self::Output {
-+        self.0 += rhs;
++        self.0 = self.0 + rhs;
 +        self
 +    }
 +}
