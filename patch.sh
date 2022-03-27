@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-SOURCE_COMMIT_HASH='c2b86265574c5713c774495dc6a926cb01a84dd0'
+SOURCE_COMMIT_HASH='3354577cbbad65f433947f58d6ac5ae0338578da'
 
 git config --global init.defaultBranch 'main'
 git config --global user.email 'git@squi.live'
